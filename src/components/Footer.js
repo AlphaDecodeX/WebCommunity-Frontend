@@ -1,17 +1,17 @@
 import React from 'react'
-import Footer from './Footer'
 import styled from 'styled-components'
 
-function Canvas() {
+function Footer() {
     return (
         <Container>
-            <Footer />
+            <h1>Hello World</h1>
         </Container>
     )
 }
 
-export default Canvas
+export default Footer
+
 
 const Container = styled.div`
-    border : 2px solid red;
+    border: 2px solid red;
 `
