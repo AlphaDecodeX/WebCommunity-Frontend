@@ -24,6 +24,8 @@ export default SideBar
 const Container = styled.div`
     height: 100vh;
     width: 20vw;
+    position: absolute;
+    z-index: 1;
     background-color: white;
 `
 

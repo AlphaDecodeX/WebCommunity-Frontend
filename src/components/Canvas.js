@@ -19,6 +19,6 @@ export default Canvas
 const Container = styled.div`
     width: 100vw;
     height: 100vh;
-    position: relative;
     background-color:red;
+    position: relative;
 `
