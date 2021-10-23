@@ -13,5 +13,7 @@ function Canvas() {
 export default Canvas
 
 const Container = styled.div`
-    border : 2px solid red;
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
 `
