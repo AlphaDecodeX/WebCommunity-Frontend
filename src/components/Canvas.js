@@ -1,10 +1,12 @@
-import React from 'react'
-import Footer from './Footer'
-import styled from 'styled-components'
+import React from 'react';
+import Footer from './Footer';
+import SideBar from "./SideBar";
+import styled from 'styled-components';
 
 function Canvas() {
     return (
         <Container>
+            <SideBar />
             <Footer />
         </Container>
     )
