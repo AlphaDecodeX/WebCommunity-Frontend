@@ -24,7 +24,7 @@ const Container = styled.div`
     position: absolute;
     bottom: 5%;
     display: flex;
-    right: 20%;
+    right: 10%;
     justify-content: space-around;
     border: 2px solid yellow;
 `
@@ -34,7 +34,7 @@ const TextArea = styled.textarea`
 `
 
 const Buttons__Container = styled.div`
-    border: 2px solid red;
+    border: 2px solid black;
     color: white;
     justify-content: space-around;
     left: 2%;
