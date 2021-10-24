@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from './Footer';
 import SideBar from "./SideBar";
 import Messages from './Messages';
 import styled from 'styled-components';
@@ -9,7 +8,7 @@ function Canvas() {
         <Container>
             <SideBar />
             <Messages />
-            <Footer />
+            {/* <Footer /> */}
         </Container>
     )
 }
