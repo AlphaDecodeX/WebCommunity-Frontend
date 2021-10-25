@@ -1,20 +1,33 @@
 import React from 'react'
 import styled from 'styled-components';
-import { useHistory } from "react-router-dom";
-
+import GoogleLogin from 'react-google-login';
+import { useHistory } from 'react-router';
 function Login() {
-    const history = useHistory();
+    let history = useHistory();
 
-    const routeChange = () => {
-        let path = `/community`;
-        history.push(path);
+    const responseGoogle = (response) => {
+        // console.log(response["profileObj"]["name"]);
+        var profileName = (response["profileObj"]["name"]);
+        var email = (response["profileObj"]["email"]);
+        var url = (response["profileObj"]["imageUrl"]);
+
+        history.push({
+            pathname: "/home",
+            state: [profileName, email, url]
+        }
+        );
     }
 
     return (
         <Container>
             <Logo />
             <Sign__In>
-                <button onClick={routeChange}>Sign In</button>
+                <GoogleLogin
+                    clientId="696722676551-6hg4e3ks5fumu5f17pt8e9e3904r5b6b.apps.googleusercontent.com"
+                    buttonText="Sign In"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    cookiePolicy={'single_host_origin'} />
             </Sign__In>
         </Container>
     )

@@ -2,6 +2,8 @@ import React from 'react';
 import SideBar from "./SideBar";
 import Messages from './Messages';
 import styled from 'styled-components';
+import Login from './Login';
+import { useHistory } from 'react-router';
 
 function Canvas() {
     return (
