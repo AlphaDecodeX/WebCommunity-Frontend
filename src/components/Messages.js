@@ -5,22 +5,29 @@ import AttachmentIcon from '@mui/icons-material/Attachment';
 import MicIcon from '@mui/icons-material/Mic';
 
 function Messages() {
+    const textValue = React.useRef(null);
+    const myMessage = React.useRef(null);
+
+    function printValue() {
+        var p = document.createElement('Me');
+        var textAnswer = document.createTextNode(textValue.current.value);
+        p.appendChild(textAnswer);
+        myMessage.current.appendChild(p);
+        console.log(textValue.current.value);
+    }
+
     return (
         <Container>
-            <LeftMessages>
-                <p>Hello Lovepreet Singh</p>
-                <p>What are you doing</p>
-            </LeftMessages>
+            <Messages__Box ref={myMessage}>
+                <Other>Hello Lovepreet Singh</Other>
+                <Me>Hi, How can I help you ?</Me>
+            </Messages__Box>
 
-            <RightMessages>
-                <p>I am doing Good</p>
-                <p>What about you</p>
-            </RightMessages>
-
+            {/* Footer Starts From Here..... */}
             <Footer>
-                <TextArea />
+                <TextArea ref={textValue} />
                 <Buttons__Container>
-                    <SendIcon fontSize="large" />
+                    <SendIcon fontSize="large" onClick={printValue} />
                     <AttachmentIcon fontSize="large" />
                     <MicIcon fontSize="large" />
                 </Buttons__Container>
@@ -38,31 +45,26 @@ const Container = styled.div`
     position: relative;
     left: 25vw;
     width: 70%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
-
+    overflow: hidden;
 `
-const LeftMessages = styled.div`
+const Messages__Box = styled.div`
     border: 2px solid red;
     position: absolute;
-    bottom:0;
+    bottom:15%;
     left:0;
+    width: 70vw;
 `
 
-const RightMessages = styled.div`
-    border: 2px solid red;
-    position: absolute;
-    bottom:0;
-    right:0;
-`
 const Footer = styled.div`
     position: absolute;
     bottom: 5%;
     display: flex;
     right: 10%;
     justify-content: space-around;
-    border: 2px solid yellow;
+    border: 2px solid black;
 `
 const TextArea = styled.textarea`
     border-radius: 5%;
@@ -75,4 +77,14 @@ const Buttons__Container = styled.div`
     justify-content: space-around;
     left: 2%;
     display:flex;
+`
+const Other = styled.p`
+    border: 2px solid black;
+    max-width: 20%;
+`
+
+const Me = styled.p`
+    float: right;
+    border: 2px solid black;
+    max-width: 20%;
 `
