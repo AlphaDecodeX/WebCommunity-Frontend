@@ -2,18 +2,24 @@ import React from 'react'
 import styled from 'styled-components';
 import GoogleLogin from 'react-google-login';
 import { useHistory } from 'react-router';
+import { useDispatch } from "react-redux";
+import { login } from './actions';
+
 function Login() {
     let history = useHistory();
+    const dispatch = useDispatch();
 
     const responseGoogle = (response) => {
         // console.log(response["profileObj"]["name"]);
-        var profileName = (response["profileObj"]["name"]);
-        var email = (response["profileObj"]["email"]);
-        var url = (response["profileObj"]["imageUrl"]);
+        let profileName = (response["profileObj"]["name"]);
+        let email = (response["profileObj"]["email"]);
+        let url = (response["profileObj"]["imageUrl"]);
+
+        let infoArray = [profileName, email, url];
+        dispatch(login(infoArray));
 
         history.push({
-            pathname: "/home",
-            state: [profileName, email, url]
+            pathname: "/home"
         }
         );
     }
