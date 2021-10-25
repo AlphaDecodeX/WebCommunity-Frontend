@@ -1,4 +1,3 @@
-import { style } from '@mui/system'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -10,9 +9,9 @@ function SideBar() {
                 <span>Community</span>
             </Logo>
             <Channels>
-                <a href="#">Channel 1</a>
-                <a href="#">Channel 2</a>
-                <a href="#">Channel 3</a>
+                <a href="a">Channel 1</a>
+                <a href="a">Channel 2</a>
+                <a href="a">Channel 3</a>
             </Channels>
         </Container>
     )
