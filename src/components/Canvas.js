@@ -6,6 +6,7 @@ import Login from './Login';
 import { useHistory } from 'react-router';
 
 function Canvas() {
+
     return (
         <Container>
             <SideBar />
