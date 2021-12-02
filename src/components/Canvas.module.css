@@ -1,0 +1,69 @@
+.canvas__homepage {
+  position: relative;
+  height: 100vh;
+}
+
+.input__message {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  border: 2px solid red;
+  bottom: 1rem;
+  width: 80%;
+  right: 20rem;
+  justify-content: end;
+}
+
+.input__message input {
+  background: #303338;
+  border: 1px solid #16171a;
+  border-radius: 7px;
+  padding: 0.5rem;
+  outline: none;
+  color: gray;
+  width: 45%;
+}
+
+.send__button {
+  background: #57f287;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: none;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.send__button:hover {
+  background: #02bb3d;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: none;
+  color: white;
+}
+
+.messages__box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  border: 2px solid red;
+  bottom: 5rem;
+  height: 85vh;
+  overflow-y: visible;
+  width: 50%;
+  right: 20rem;
+  color: white;
+  padding: 1rem;
+  justify-content: flex-end;
+}
+
+.right__message {
+  border: 2px solid red;
+  text-align: right;
+  background-color: red;
+}
+
+.left__message {
+  border: 2px solid red;
+  background-color: green;
+}

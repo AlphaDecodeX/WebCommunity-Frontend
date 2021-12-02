@@ -1,0 +1,23 @@
+.login__homepage {
+  background: #2e3036;
+  height: 20%;
+  width: 20%;
+  margin: 20rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__homepage img {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media (max-width: 1400px) {
+  .login__homepage {
+    width: 40%;
+  }
+}
